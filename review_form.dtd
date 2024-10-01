@@ -1,0 +1,28 @@
+<!DOCTYPE reviewForm [
+    <!-- Root element -->
+    <!ELEMENT reviewForm (customerDetails, productDetails, sellerDetails, reviewDetails)>
+
+    <!-- Customer Details -->
+    <!ELEMENT customerDetails (name, id)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT id (#PCDATA)>
+
+    <!-- Product Details -->
+    <!ELEMENT productDetails (productName, purchaseDate, purchaseEase, productRating)>
+    <!ELEMENT productName (#PCDATA)>
+    <!ELEMENT purchaseDate (#PCDATA)>
+    <!ELEMENT purchaseEase (#PCDATA)>
+    <!ELEMENT productRating (#PCDATA)>
+
+    <!-- Seller Details -->
+    <!ELEMENT sellerDetails (sellerName, sellerId, sellerRating)>
+    <!ELEMENT sellerName (#PCDATA)>
+    <!ELEMENT sellerId (#PCDATA)>
+    <!ELEMENT sellerRating (#PCDATA)>
+
+    <!-- Review Details -->
+    <!ELEMENT reviewDetails (description, uploadedPhotos, anonymous)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT uploadedPhotos (#PCDATA)>
+    <!ELEMENT anonymous (#PCDATA)>
+]>

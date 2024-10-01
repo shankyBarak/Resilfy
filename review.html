@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+    <h3>Write your Feedback</h3>
+    <form class="customer_review" id="customer_review">
+        <!-- Customer Details -->
+        <fieldset class="customerDetails">
+            <legend>Customer Details</legend>
+            <label for="name">Name</label>
+            <input type="text" name="name" class="customer" required>
+
+            <label for="id">Give your ID number</label>
+            <input type="text" name="id" class="customer" required>
+        </fieldset>
+
+        <!-- Product Details -->
+        <fieldset class="productDetails">
+            <legend>Product Details</legend>
+            <label for="productName">Product Name</label>
+            <input type="text" name="productName" class="product" required>
+
+            <label for="purchaseDate">Purchase Date</label>
+            <input type="date" name="purchaseDate" class="product">
+
+            <label for="ease">How easy was the purchase process?</label>
+            <select name="ease" id="experience" required>
+                <option value="">--Select--</option>
+                <option value="veryEasy">Very Easy</option>
+                <option value="easy">Easy</option>
+                <option value="normal">Normal</option>
+                <option value="hard">Hard</option>
+                <option value="veryHard">Very Hard</option>
+            </select>
+
+            <div class="productRating">
+                <label>Product Rating</label>
+                <input type="radio" name="productRating" id="pstar5" value="5" required>
+                <label for="pstar5">5 Stars</label>
+                <input type="radio" name="productRating" id="pstar4" value="4">
+                <label for="pstar4">4 Stars</label>
+                <input type="radio" name="productRating" id="pstar3" value="3">
+                <label for="pstar3">3 Stars</label>
+                <input type="radio" name="productRating" id="pstar2" value="2">
+                <label for="pstar2">2 Stars</label>
+                <input type="radio" name="productRating" id="pstar1" value="1">
+                <label for="pstar1">1 Star</label>
+            </div>
+
+            <label for="condition">Product Condition</label>
+            <select name="condition" id="condition" required>
+                <option value="">--Select Condition--</option>
+                <option value="new">New</option>
+                <option value="likeNew">Like New</option>
+                <option value="good">Good</option>
+                <option value="fair">Fair</option>
+                <option value="poor">Poor</option>
+            </select>
+
+            <label for="uploadPhotos">Upload Photos of the Product</label>
+            <input type="file" name="uploadPhotos" accept="image/*" multiple>
+        </fieldset>
+
+        <!-- Seller Details -->
+        <fieldset class="sellerDetails">
+            <legend>Seller Details</legend>
+            <label for="sellerName">Seller Name</label>
+            <input type="text" name="sellerName" class="seller" required>
+
+            <label for="sellerId">Give seller ID number</label>
+            <input type="text" name="sellerId" class="seller" required>
+
+            <div class="sellerRating">
+                <label>Seller Rating</label>
+                <input type="radio" name="sellerRating" id="sstar5" value="5" required>
+                <label for="sstar5">5 Stars</label>
+                <input type="radio" name="sellerRating" id="sstar4" value="4">
+                <label for="sstar4">4 Stars</label>
+                <input type="radio" name="sellerRating" id="sstar3" value="3">
+                <label for="sstar3">3 Stars</label>
+                <input type="radio" name="sellerRating" id="sstar2" value="2">
+                <label for="sstar2">2 Stars</label>
+                <input type="radio" name="sellerRating" id="sstar1" value="1">
+                <label for="sstar1">1 Star</label>
+            </div>
+
+
+            <label for="satisfaction">Overall Satisfaction</label>
+            <input type="range" name="satisfaction" min="1" max="10" value="5">
+
+            <label>
+                <input type="checkbox" name="anonymous" value="yes"> Submit as Anonymous
+            </label>
+
+            <label for="comments">Detailed Review</label>
+            <textarea name="comments" id="comments" rows="5" placeholder="Write your experience here..."></textarea>
+        </fieldset>
+
+        <button type="submit">Submit Review</button>
+    </form>
+    <script src="script.js"></script>
+
+</body>
+</html>

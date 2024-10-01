@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reviewForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="review_form.xsd">
+<!DOCTYPE reviewForm SYSTEM "review_form.dtd">
+<reviewForm>
+    <customerDetails>
+        <name>John Doe</name>
+        <id>12345</id>
+    </customerDetails>
+
+    <productDetails>
+        <productName>Second-hand Laptop</productName>
+        <purchaseDate>2024-09-10</purchaseDate>
+        <purchaseEase>Very Easy</purchaseEase>
+        <productRating>5</productRating>
+    </productDetails>
+
+    <sellerDetails>
+        <sellerName>Jane Smith</sellerName>
+        <sellerId>98765</sellerId>
+        <sellerRating>4</sellerRating>
+    </sellerDetails>
+
+    <reviewDetails>
+        <description>This was a fantastic deal, and the product is as good as new!</description>
+        <uploadedPhotos>photo1.jpg, photo2.jpg</uploadedPhotos>
+        <anonymous>false</anonymous>
+    </reviewDetails>
+</reviewForm>

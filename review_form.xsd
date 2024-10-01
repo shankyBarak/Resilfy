@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Root element -->
+    <xs:element name="reviewForm">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Customer Details -->
+                <xs:element name="customerDetails">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="id" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="required" type="xs:boolean" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Product Details -->
+                <xs:element name="productDetails">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="productName" type="xs:string"/>
+                            <xs:element name="purchaseDate" type="xs:date"/>
+                            <xs:element name="purchaseEase" type="purchaseEaseType"/>
+                            <xs:element name="productRating" type="ratingType"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Seller Details -->
+                <xs:element name="sellerDetails">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="sellerName" type="xs:string"/>
+                            <xs:element name="sellerId" type="xs:string"/>
+                            <xs:element name="sellerRating" type="ratingType"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Review Details -->
+                <xs:element name="reviewDetails">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="uploadedPhotos" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="anonymous" type="xs:boolean"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define simple types for specific restrictions -->
+    <xs:simpleType name="purchaseEaseType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Very Easy"/>
+            <xs:enumeration value="Easy"/>
+            <xs:enumeration value="Normal"/>
+            <xs:enumeration value="Hard"/>
+            <xs:enumeration value="Very Hard"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ratingType">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[1-5]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
